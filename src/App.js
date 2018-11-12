@@ -1,10 +1,21 @@
 import React, { Component } from 'react';
-import './App.css';
+import { HashRouter, Switch, Route } from 'react-router-dom';
+
+import WeekWeather from './views/Weather/WeekWeather'
+import WeekGraphicWeather from './views/Weather/WeekGraphicWeather'
+import DayWeather from './views/Weather/DayWeather'
 
 class App extends Component {
   render() {
     return (
       <div>
+        <WeekWeather/>
+        <HashRouter>
+          <Switch>
+            <Route exact path="/" name="Week Graph" component={WeekGraphicWeather}/>
+            <Route path="/:day" name="DayWeather" component={DayWeather}/>
+          </Switch>
+        </HashRouter>
       </div>
     );
   }
