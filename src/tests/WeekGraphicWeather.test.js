@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import WeekWeather from './WeekWeather';
+import WeekGraphicWeather from '../views/Weather/WeekGraphicWeather';
 
 it('renders without crashing', () => {
   const div = document.createElement('div');
-  ReactDOM.render(<WeekWeather />, div);
+  ReactDOM.render(<WeekGraphicWeather />, div);
   ReactDOM.unmountComponentAtNode(div);
 });
