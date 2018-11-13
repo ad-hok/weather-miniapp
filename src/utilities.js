@@ -14,7 +14,7 @@ import { DAY_THUNDERSTORM_ICON, NIGHT_THUNDERSTORM_ICON, NEUTRAL_THUNDERSTORM_IC
  */
 export const getAverageWeather = (temps) => {
   const totalTemp = temps.reduce( (sum, t) =>  sum + t.weather[0].id,0);
-  return parseInt(totalTemp / temps.length).toFixed(0));
+  return parseInt((totalTemp / temps.length).toFixed(0));
 };
 
 /**
