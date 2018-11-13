@@ -3,7 +3,7 @@ import { HashRouter, Switch, Route } from 'react-router-dom';
 
 import WeekWeather from './views/Weather/WeekWeather'
 import WeekGraphicWeather from './views/Weather/WeekGraphicWeather'
-import DayWeather from './views/Weather/DayWeather'
+import DayWeatherDetailed from './views/Weather/DayWeatherDetailed'
 
 class App extends Component {
   render() {
@@ -13,7 +13,7 @@ class App extends Component {
         <HashRouter>
           <Switch>
             <Route exact path="/" name="Week Graph" component={WeekGraphicWeather}/>
-            <Route path="/:day" name="DayWeather" component={DayWeather}/>
+            <Route path="/:day" name="DayWeatherDetailed" component={DayWeatherDetailed}/>
           </Switch>
         </HashRouter>
       </div>
