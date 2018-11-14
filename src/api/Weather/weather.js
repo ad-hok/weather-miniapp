@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { WEEK_QUERY } from '../../constants'
+import { WEEK_QUERY, DAY_QUERY } from '../../constants'
 
 /**
  * La función consulta la API de https://openweathermap.org y recibe el clima de 5 días
@@ -9,4 +9,8 @@ function getWeekWeather(){
   return axios(WEEK_QUERY);
 }
 
-export { getWeekWeather }
+function getDayWeather(){
+  return axios(DAY_QUERY);
+}
+
+export { getWeekWeather, getDayWeather }
