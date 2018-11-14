@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { Card, CardBody, CardSubtitle, CardFooter } from 'reactstrap';
 import moment from 'moment';
 import { getAverageWeather, getWeatherIcon } from '../../utilities'
@@ -18,7 +19,7 @@ class DayWeather extends Component {
   }
 
   render() {
-    const { day } = this.props;
+    const { day, i } = this.props;
     if(!day) return '';
     const min = this._minTemp(day);
     const max = this._maxTemp(day);
@@ -28,9 +29,13 @@ class DayWeather extends Component {
         <Card>
           <CardBody className="text-center">
             <CardSubtitle className="mb-4">
-              {moment(day[0].dt_txt).format('ddd')}
+              <Link
+                to={`/${i}`}
+              >
+                {moment(day[0].dt_txt).format('ddd')}
+              </Link>
             </CardSubtitle>
-            <i className={icon}></i>{getAverageWeather(day)}
+            <i className={icon}></i>
           </CardBody>
           <CardFooter>
             {`Max: ${max.toFixed(0)}º - Min: ${min.toFixed(0)}º`}

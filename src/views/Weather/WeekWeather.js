@@ -58,6 +58,7 @@ class WeekWeather extends Component {
           >
             <DayWeather
               day={d}
+              i={i}
             />
           </Col>
       )
