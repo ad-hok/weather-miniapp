@@ -4,6 +4,7 @@ import moment from 'moment';
 import { Card, CardHeader, CardBody, CardTitle, CardSubtitle,
   Row, Col } from 'reactstrap';
 import { getWeatherIcon } from '../../utilities'
+import DayGraphicWeather from './DayGraphicWeather';
 
 class DayWeatherDetailed extends Component {
   constructor(){
@@ -19,7 +20,6 @@ class DayWeatherDetailed extends Component {
     if(!days || !days.length || day < 0 || day > 5){
       return <tr><td colSpan="3">No info</td></tr>;
     }else{
-      const dayName = days[day][0].dayName;
       return days[day]
         .map( d => {
           const hour = moment(d.dt_txt).format('HH:mm');
@@ -39,6 +39,16 @@ class DayWeatherDetailed extends Component {
             </tr>
           );
         });
+    }
+  }
+
+  _getDay(){
+    const days = this.props.days;
+    const day = this.props.match.params.day;
+    if(!days || !days.length || day < 0 || day > 5){
+      return [];
+    }else{
+      return days[day];
     }
   }
 
@@ -74,7 +84,7 @@ class DayWeatherDetailed extends Component {
             </Card>
           </Col>
           <Col xs="12" sm="12" md="6">
-            DayGraph
+            <DayGraphicWeather day={this._getDay()}/>
           </Col>
         </Row>
       </div>

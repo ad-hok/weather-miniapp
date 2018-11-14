@@ -33,8 +33,8 @@ class WeekWeather extends Component {
       <div>
         <Card>
           <CardHeader>
-            <CardTitle>Pronóstico del tiempo</CardTitle>
-            <CardSubtitle>{city.name} / Próximos 5 días</CardSubtitle>
+            <CardTitle>Weather forecast</CardTitle>
+            <CardSubtitle>{city.name} / Next 5 days</CardSubtitle>
           </CardHeader>
           <CardBody>
             <Row>
