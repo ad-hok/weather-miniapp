@@ -1,52 +1,13 @@
 import React, { Component } from 'react';
 import { Card, CardHeader, CardBody, CardTitle, CardSubtitle,
   Row, Col } from 'reactstrap';
-import moment from 'moment';
 
 import DayWeather from './DayWeather';
-import { getWeekWeather } from '../../api/Weather/weather';
 
 class WeekWeather extends Component {
-  constructor(){
-    super();
-    this.state = {
-      days: [],
-      city: null
-    }
-  }
-
-  async componentDidMount(){
-    try {
-      let res = await getWeekWeather();
-      this._getDays(res.data.list);
-      this._getCityInfo(res.data.city);
-    } catch (e) {
-      //manejar el error
-    }
-  }
-
-  _getDays(list){
-    const days = []
-    const today = moment().format('YYYY-MM-DD');
-    list.forEach( d => {
-      const day = moment(d.dt_txt).format('YYYY-MM-DD');
-      const i = moment(day).diff(today, 'days');
-      if( !days[i] ) days[i] = [];
-      days[i].push(d);
-    });
-    this.setState({
-      days
-    });
-  }
-
-  _getCityInfo(city){
-    this.setState({
-      city
-    });
-  }
 
   _renderDays(){
-    const { days } = this.state;
+    const { days } = this.props;
     return days.map( (d, i) => {
       return (
           <Col
@@ -66,7 +27,7 @@ class WeekWeather extends Component {
   }
 
   render() {
-    const { days, city } = this.state;
+    const { days, city } = this.props;
     if(!days.length || !city) return '';
     return (
       <div>
