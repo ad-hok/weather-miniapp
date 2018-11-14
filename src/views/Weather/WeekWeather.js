@@ -30,11 +30,9 @@ class WeekWeather extends Component {
     const today = moment().format('YYYY-MM-DD');
     list.forEach( d => {
       const day = moment(d.dt_txt).format('YYYY-MM-DD');
-      if(moment(day).isAfter(today, 'day')){
-        const i = moment(day).diff(today, 'days');
-        if( !days[i] ) days[i] = [];
-        days[i].push(d);
-      }
+      const i = moment(day).diff(today, 'days');
+      if( !days[i] ) days[i] = [];
+      days[i].push(d);
     });
     this.setState({
       days
