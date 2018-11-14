@@ -35,6 +35,16 @@ export const getMaxDayTemp = (temps) => {
 };
 
 /**
+ * [la función permite calcular la temperatura minima del un dia]
+ * @param  {Array} temps [temperaturas]
+ * @return {Float} temperatura máxima
+ */
+export const getMinDayTemp = (temps) => {
+  const minTemp = temps.reduce( (min, t) => (t.main.temp < min)?t.main.temp:min, temps[0].main.temp);
+  return parseFloat(minTemp);
+};
+
+/**
  * [la función permite calcular la temperatura maxima del listado enviado]
  * @param  {Array} temps [temperaturas]
  * @return {Float} temperatura máxima
