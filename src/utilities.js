@@ -1,8 +1,5 @@
-import { DAY_THUNDERSTORM_ICON, NIGHT_THUNDERSTORM_ICON, NEUTRAL_THUNDERSTORM_ICON,
-  DAY_DRIZZLE_ICON, NIGHT_DRIZZLE_ICON, NEUTRAL_DRIZZLE_ICON, DAY_RAIN_ICON,
-  NIGHT_RAIN_ICON, NEUTRAL_RAIN_ICON, DAY_SNOW_ICON, NIGHT_SNOW_ICON,
-  NEUTRAL_SNOW_ICON, DAY_FOG_ICON, NIGHT_FOG_ICON, NEUTRAL_FOG_ICON, DAY_CLEAR_ICON,
-  NIGHT_CLEAR_ICON, NEUTRAL_CLEAR_ICON, DAY_CLOUDY_ICON, NIGHT_CLOUDY_ICON,
+import { DAY_THUNDERSTORM_ICON, DAY_DRIZZLE_ICON, NEUTRAL_RAIN_ICON,
+  NEUTRAL_SNOW_ICON, NEUTRAL_FOG_ICON, DAY_CLEAR_ICON, DAY_CLOUDY_ICON,
   NEUTRAL_CLOUDY_ICON } from './constants'
 
 /**
@@ -15,6 +12,46 @@ import { DAY_THUNDERSTORM_ICON, NIGHT_THUNDERSTORM_ICON, NEUTRAL_THUNDERSTORM_IC
 export const getAverageWeather = (temps) => {
   const totalTemp = temps.reduce( (sum, t) =>  sum + t.weather[0].id,0);
   return parseInt((totalTemp / temps.length).toFixed(0));
+};
+
+/**
+ * [la función permite calcular la temperatura promedio del día]
+ * @param  {Array} temps [temperaturas de un día]
+ * @return {Float} temperatura promedio del dia
+ */
+export const getAverageTemp = (temps) => {
+  const totalTemp = temps.reduce( (sum, t) =>  sum + t.main.temp,0);
+  return parseFloat((totalTemp / temps.length).toFixed(1));
+};
+
+/**
+ * [la función permite calcular la temperatura maxima del un dia]
+ * @param  {Array} temps [temperaturas]
+ * @return {Float} temperatura máxima
+ */
+export const getMaxDayTemp = (temps) => {
+  const maxTemp = temps.reduce( (max, t) => (t.main.temp > max)?t.main.temp:max, temps[0].main.temp);
+  return parseFloat(maxTemp);
+};
+
+/**
+ * [la función permite calcular la temperatura maxima del listado enviado]
+ * @param  {Array} temps [temperaturas]
+ * @return {Float} temperatura máxima
+ */
+export const getMaxWeekTemp = (temps) => {
+  const maxTemp = temps.reduce( (max, t) => (t && t.temp > max)?t.temp:max, temps[1].temp);
+  return parseFloat(maxTemp);
+};
+
+/**
+ * [la función permite calcular la temperatura mínima del listado enviado]
+ * @param  {Array} temps [temperaturas]
+ * @return {Float} temperatura minima
+ */
+export const getMinWeekTemp = (temps) => {
+  const minTemp = temps.reduce( (min, t) => (t && t.temp < min)?t.temp:min, temps[1].temp);
+  return parseFloat(minTemp);
 };
 
 /**
