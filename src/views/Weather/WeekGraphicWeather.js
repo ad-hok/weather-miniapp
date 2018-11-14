@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Card, CardHeader, CardBody, CardTitle } from 'reactstrap';
 import { Group } from '@vx/group';
 import { LinePath } from '@vx/shape';
 import { scaleTime, scaleLinear } from "@vx/scale";
@@ -70,46 +71,53 @@ class WeekGraphicWeather extends Component {
       domain: [minTemp-2, maxTemp+2],
     });
     return (
-      <div id="chart">
-        <svg width={width} height={height}>
-          <rect x={80} y={10} width={width-100} height={height-50} fill="#EBEAEC" />
-          <defs>
-            <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%" stopColor="#000" />
-              <stop offset="100%" stopColor="#000" />
-            </linearGradient>
-          </defs>
-          <Group top="10" left="80">
-            <AxisLeft
-              scale={yScale}
-              top={0}
-              label={'Temp ºC'}
-              stroke={'#1b1a1e'}
-              tickTextFill={'#1b1a1e'}
-            />
-            <AxisBottom
-              scale={xScale}
-              top={height-50}
-              left={-30}
-              label={'Day'}
-              stroke={'#1b1a1e'}
-              tickTextFill={'#1b1a1e'}
-              numTicks={6}
-              tickFormat={(val, i) => moment(val).format('ddd')}
-            />
-            <LinePath
-              data={chartData}
-              x={x}
-              y={y}
-              xScale={xScale}
-              yScale={yScale}
-              strokeWidth={3}
-              stroke="#000"
-              strokeLinecap="round"
-            />
-          </Group>
-        </svg>
-      </div>
+      <Card>
+        <CardHeader>
+          <CardTitle>Weekly Graph</CardTitle>
+        </CardHeader>
+        <CardBody>
+          <div id="chart">
+            <svg width={width} height={height}>
+              <rect x={80} y={10} width={width-100} height={height-50} fill="#EBEAEC" />
+              <defs>
+                <linearGradient id="linear" x1="0%" y1="0%" x2="100%" y2="0%">
+                  <stop offset="0%" stopColor="#000" />
+                  <stop offset="100%" stopColor="#000" />
+                </linearGradient>
+              </defs>
+              <Group top="10" left="80">
+                <AxisLeft
+                  scale={yScale}
+                  top={0}
+                  label={'Temp ºC'}
+                  stroke={'#1b1a1e'}
+                  tickTextFill={'#1b1a1e'}
+                />
+                <AxisBottom
+                  scale={xScale}
+                  top={height-50}
+                  left={-30}
+                  label={'Day'}
+                  stroke={'#1b1a1e'}
+                  tickTextFill={'#1b1a1e'}
+                  numTicks={6}
+                  tickFormat={(val, i) => moment(val).format('ddd')}
+                />
+                <LinePath
+                  data={chartData}
+                  x={x}
+                  y={y}
+                  xScale={xScale}
+                  yScale={yScale}
+                  strokeWidth={3}
+                  stroke="#000"
+                  strokeLinecap="round"
+                />
+              </Group>
+            </svg>
+          </div>
+        </CardBody>
+      </Card>
     );
   }
 }
