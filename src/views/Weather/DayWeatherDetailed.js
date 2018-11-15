@@ -57,9 +57,9 @@ class DayWeatherDetailed extends Component {
    */
   _getDay(){
     //los días con el clima entregado por props
-    const days = this.props.days;
+    const days = (this.props && this.props.days)?this.props.days:[];
     //el dia requerido, obtenido desde los props de parametros de ruta
-    const day = this.props.match.params.day;
+    const day = this._getDayName();
     //se obtiene el indice del dia en el array days, según el String day
     const dayIndex = days.findIndex(d => (d[0].dayName === day));
     /*
@@ -78,7 +78,10 @@ class DayWeatherDetailed extends Component {
    * @return {String} El nombre del día consultado
    */
   _getDayName(){
-    return this.props.match.params.day;
+    return (this.props
+      && this.props.match
+      && this.props.match.params
+      && this.props.match.params.day)?this.props.match.params.day: '';
   }
 
   /**
