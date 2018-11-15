@@ -6,6 +6,10 @@ import { Card, CardHeader, CardBody, CardTitle, CardSubtitle,
 import { getWeatherIcon } from '../../utilities'
 import DayGraphicWeather from './DayGraphicWeather';
 
+/**
+ * La clase representa el tiempo de un día en detalle
+ * @extends Component
+ */
 class DayWeatherDetailed extends Component {
   constructor(){
     super();
@@ -14,13 +18,23 @@ class DayWeatherDetailed extends Component {
     }
   }
 
+  /**
+   * El método renderiza el clima a lo largo del día
+   * @return {Component} los climas del día
+   */
   _renderDetail(){
+    //se obtiene el día requerido según la ruta indicada
     const day = this._getDay();
+    //se recorren los climas del día
     return day
       .map( d => {
+        //se obtiene la hora del clima
         const hour = moment(d.dt_txt).format('HH:mm');
+        //se obtiene la temperatura de ese momento
         const temp = d.main.temp;
+        //se obtiene el icono que representa el clima de ese momento
         const weather = getWeatherIcon(d.weather[0].id);
+        //se retorna una fila que incluye hora, temperatura e icono
         return (
           <tr key={hour}>
             <td>
@@ -37,10 +51,21 @@ class DayWeatherDetailed extends Component {
       });
   }
 
+  /**
+   * Obtiene el día requerido de prop de dias, a partir del String del prop  day
+   * @return {Array} Clima de un dia en detalle
+   */
   _getDay(){
+    //los días con el clima entregado por props
     const days = this.props.days;
+    //el dia requerido, obtenido desde los props de parametros de ruta
     const day = this.props.match.params.day;
+    //se obtiene el indice del dia en el array days, según el String day
     const dayIndex = days.findIndex(d => (d[0].dayName === day));
+    /*
+    si no se reciben props con dias, o viene vacío, o el índice está
+    fuera de los rangos permitidos, se retorna Array vacío []
+    */
     if(!days || !days.length || dayIndex < 0 || dayIndex > 5){
       return [];
     }else{
@@ -48,10 +73,18 @@ class DayWeatherDetailed extends Component {
     }
   }
 
+  /**
+   * Obtiene el nombre del día según props
+   * @return {String} El nombre del día consultado
+   */
   _getDayName(){
     return this.props.match.params.day;
   }
 
+  /**
+   * Renderiza una tabla con el clima detallado del dia requerido
+   * @return {Component} El clima de un dia y el grafico diario
+   */
   render() {
     return (
       <div>

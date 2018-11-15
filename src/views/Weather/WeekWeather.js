@@ -4,10 +4,20 @@ import { Card, CardHeader, CardBody, CardTitle, CardSubtitle,
 
 import DayWeather from './DayWeather';
 
+/**
+ * La clase renderiza los días y el clima de cada uno
+ * @extends Component
+ */
 class WeekWeather extends Component {
 
+  /**
+   * El método carga el componente DayWeather para cadá dia a mostrar
+   * @return {[type]} [description]
+   */
   _renderDays(){
+    //se reciben los dias desde los props
     const { days } = this.props;
+    //se recorre el array recibido y se muestra el componente DayWeather para cada elemento
     return days.map( (d, i) => {
       return (
           <Col
@@ -26,6 +36,10 @@ class WeekWeather extends Component {
     });
   }
 
+  /**
+   * Renderiza el componente y los días requeridos
+   * @return {Component} Los días requeridos
+   */
   render() {
     const { days, city } = this.props;
     if(!days.length || !city) return '';

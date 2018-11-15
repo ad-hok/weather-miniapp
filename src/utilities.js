@@ -66,6 +66,7 @@ export const getMinWeekTemp = (temps) => {
 
 /**
  * [la función devuelve un icono descriptivo para el valor numérico del clima]
+ * @see https://erikflowers.github.io/weather-icons/
  * @param  {[Int]} weather [valor numérico asociado al clima]
  * @return {[String]}  [la clase del icono a mostrar]
  */
