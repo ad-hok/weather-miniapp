@@ -1,6 +1,12 @@
 # weather-miniapp
 A tiny app that shows weather of the 5 next days
 
+## Installation
+Clone this repo and
+
+    npm i
+
+
 ## Available Scripts
 
 In the project directory, you can run:
