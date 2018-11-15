@@ -27,8 +27,21 @@ class DayGraphicWeather extends Component {
     }
   }
 
+  componentDidUpdate(){
+    let { width } = this.state
+    try {
+      const newWidth = document.getElementById("chart").offsetWidth;
+      if(width !== newWidth){
+        width = newWidth;
+        this.setState({ width });
+      }
+    } catch (e) {
+      //manejar el error
+    }
+  }
+
   render() {
-    const { day } = this.props;
+    const { day, dayName } = this.props;
     const { height, width } = this.state;
     if(!day || !day.length) return '';
     const x = d => new Date(d.dt_txt);
@@ -50,7 +63,7 @@ class DayGraphicWeather extends Component {
         <Card>
           <CardHeader>
             <CardTitle>
-              Hourly Graphic
+              Hourly Graphic: {dayName}
             </CardTitle>
           </CardHeader>
           <CardBody>

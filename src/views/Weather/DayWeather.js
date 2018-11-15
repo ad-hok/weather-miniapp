@@ -30,7 +30,7 @@ class DayWeather extends Component {
           <CardBody className="text-center">
             <CardSubtitle className="mb-4">
               <Link
-                to={`/${i}`}
+                to={`/${day[0].dayName}`}
               >
                 {moment(day[0].dt_txt).format('ddd')}
               </Link>

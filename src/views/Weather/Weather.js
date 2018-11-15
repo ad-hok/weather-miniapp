@@ -31,7 +31,7 @@ class Weather extends Component {
     const today = moment().format('YYYY-MM-DD');
     list.forEach( d => {
       const day = moment(d.dt_txt).format('YYYY-MM-DD');
-      const dayName = moment(d.dt_txt).format('ddd');
+      const dayName = moment(d.dt_txt).format('dddd');
       const i = moment(day).diff(today, 'days');
       if( !days[i] ) days[i] = [];
       days[i].push({...d, dayName});
