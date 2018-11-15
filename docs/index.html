@@ -1,0 +1,2722 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8' />
+  <title>weather-miniapp 0.1.0 | Documentation</title>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' type='text/css' rel='stylesheet' />
+  <link href='assets/style.css' type='text/css' rel='stylesheet' />
+  <link href='assets/github.css' type='text/css' rel='stylesheet' />
+  <link href='assets/split.css' type='text/css' rel='stylesheet' />
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>weather-miniapp</h3>
+          <div class='mb1'><code>0.1.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#getweekweather'
+                  class="">
+                  getWeekWeather
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getdayweather'
+                  class="">
+                  getDayWeather
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getaverageweather'
+                  class="">
+                  getAverageWeather
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getaveragetemp'
+                  class="">
+                  getAverageTemp
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getmaxdaytemp'
+                  class="">
+                  getMaxDayTemp
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getmindaytemp'
+                  class="">
+                  getMinDayTemp
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getmaxweektemp'
+                  class="">
+                  getMaxWeekTemp
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getminweektemp'
+                  class="">
+                  getMinWeekTemp
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getweathericon'
+                  class="">
+                  getWeatherIcon
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#daygraphicweather'
+                  class=" toggle-sibling">
+                  DayGraphicWeather
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#daygraphicweathercomponentdidmount'
+                        class='regular pre-open'>
+                        #componentDidMount
+                      </a></li>
+                      
+                      <li><a
+                        href='#daygraphicweathercomponentdidupdate'
+                        class='regular pre-open'>
+                        #componentDidUpdate
+                      </a></li>
+                      
+                      <li><a
+                        href='#daygraphicweatherrender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#xscale'
+                  class="">
+                  xScale
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#xscale'
+                  class="">
+                  xScale
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#yscale'
+                  class="">
+                  yScale
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#yscale'
+                  class="">
+                  yScale
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#dayweather'
+                  class=" toggle-sibling">
+                  DayWeather
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#dayweather_mintemp'
+                        class='regular pre-open'>
+                        #_minTemp
+                      </a></li>
+                      
+                      <li><a
+                        href='#dayweather_maxtemp'
+                        class='regular pre-open'>
+                        #_maxTemp
+                      </a></li>
+                      
+                      <li><a
+                        href='#dayweather_geticon'
+                        class='regular pre-open'>
+                        #_getIcon
+                      </a></li>
+                      
+                      <li><a
+                        href='#dayweatherrender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#dayweatherdetailed'
+                  class=" toggle-sibling">
+                  DayWeatherDetailed
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#dayweatherdetailed_renderdetail'
+                        class='regular pre-open'>
+                        #_renderDetail
+                      </a></li>
+                      
+                      <li><a
+                        href='#dayweatherdetailed_getday'
+                        class='regular pre-open'>
+                        #_getDay
+                      </a></li>
+                      
+                      <li><a
+                        href='#dayweatherdetailed_getdayname'
+                        class='regular pre-open'>
+                        #_getDayName
+                      </a></li>
+                      
+                      <li><a
+                        href='#dayweatherdetailedrender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#weather'
+                  class=" toggle-sibling">
+                  Weather
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#weather_getdays'
+                        class='regular pre-open'>
+                        #_getDays
+                      </a></li>
+                      
+                      <li><a
+                        href='#weather_getcityinfo'
+                        class='regular pre-open'>
+                        #_getCityInfo
+                      </a></li>
+                      
+                      <li><a
+                        href='#weatherrender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#weekgraphicweather'
+                  class=" toggle-sibling">
+                  WeekGraphicWeather
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#weekgraphicweathercomponentdidmount'
+                        class='regular pre-open'>
+                        #componentDidMount
+                      </a></li>
+                      
+                      <li><a
+                        href='#weekgraphicweather_getdays'
+                        class='regular pre-open'>
+                        #_getDays
+                      </a></li>
+                      
+                      <li><a
+                        href='#weekgraphicweatherrender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#weekweather'
+                  class=" toggle-sibling">
+                  WeekWeather
+                  <span class='icon'>▸</span>
+                </a>
+                
+                <div class='toggle-target display-none'>
+                  
+                  
+                    <ul class='list-reset py1-ul pl1'>
+                      <li class='h5'><span>Instance members</span></li>
+                      
+                      <li><a
+                        href='#weekweather_renderdays'
+                        class='regular pre-open'>
+                        #_renderDays
+                      </a></li>
+                      
+                      <li><a
+                        href='#weekweatherrender'
+                        class='regular pre-open'>
+                        #render
+                      </a></li>
+                      
+                    </ul>
+                  
+                  
+                  
+                </div>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='http://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getweekweather'>
+      getWeekWeather
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La función consulta la API de <a href="https://openweathermap.org">https://openweathermap.org</a> y recibe el clima de 5 días</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getWeekWeather(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promesa que al ser resuelta entregará el resultado de la query
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getdayweather'>
+      getDayWeather
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La función consulta la API de <a href="https://openweathermap.org">https://openweathermap.org</a> y recibe el clima del día en curso</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getDayWeather(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        Promesa que al ser resuelta entregará el resultado de la query
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getaverageweather'>
+      getAverageWeather
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>[la función permite calcular el clima promedio del día]
+Está función es una aproximación al clima promedio, y debe ser mejorada en futuras versiones,
+no se asegura que ante variaciones muy abruptas del clima, funcione correctamente.</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getAverageWeather</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>([<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>])</code>
+	    [temperaturas de un día]
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>[Int]</code>:
+        [el valor numérico asociado al clima según https://openweathermap.org/weather-conditions ]
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getaveragetemp'>
+      getAverageTemp
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>[la función permite calcular la temperatura promedio del día]</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getAverageTemp</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    [temperaturas de un día]
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Float</code>:
+        temperatura promedio del dia
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getmaxdaytemp'>
+      getMaxDayTemp
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>[la función permite calcular la temperatura maxima del un dia]</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getMaxDayTemp</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    [temperaturas]
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Float</code>:
+        temperatura máxima
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getmindaytemp'>
+      getMinDayTemp
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>[la función permite calcular la temperatura minima del un dia]</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getMinDayTemp</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    [temperaturas]
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Float</code>:
+        temperatura máxima
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getmaxweektemp'>
+      getMaxWeekTemp
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>[la función permite calcular la temperatura maxima del listado enviado]</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getMaxWeekTemp</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    [temperaturas]
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Float</code>:
+        temperatura máxima
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getminweektemp'>
+      getMinWeekTemp
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>[la función permite calcular la temperatura mínima del listado enviado]</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getMinWeekTemp</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    [temperaturas]
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Float</code>:
+        temperatura minima
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getweathericon'>
+      getWeatherIcon
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>[la función devuelve un icono descriptivo para el valor numérico del clima]</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>getWeatherIcon</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>weather</span> <code class='quiet'>([Int])</code>
+	    [valor numérico asociado al clima]
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>[<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>]</code>:
+        [la clase del icono a mostrar]
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='daygraphicweather'>
+      DayGraphicWeather
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La clase presenta el gráfico de tempraturas de un día</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new DayGraphicWeather()</div>
+   
+  
+  
+    <p>
+      Extends
+      
+        Component
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='daygraphicweathercomponentdidmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidMount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>El método calcula el ancho del contendor del gráfico</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>componentDidMount()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='daygraphicweathercomponentdidupdate'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidUpdate()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>El método verifica cambios que requieran actualiza el gráfico y recalcula el ancho</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>componentDidUpdate()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='daygraphicweatherrender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Renderiza el gráfico de temperaturas de un día</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>render(): Component</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Component</code>:
+        El gráfico del día
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='xscale'>
+      xScale
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La variable almacena la información de los limites gráficos y de información en eje x</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>xScale</div>
+   
+  
+    <p>
+      Type:
+      scaleTime
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='xscale'>
+      xScale
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>la variable almacena los límites gráficos y de información del eje x
+El eje x representa la fecha</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>xScale</div>
+   
+  
+    <p>
+      Type:
+      scaleTime
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='yscale'>
+      yScale
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La variable almacena la información de los limites gráficos y de información en eje y
+Se añaden +-2 grados a la temperatura, para efectos visuales</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>yScale</div>
+   
+  
+    <p>
+      Type:
+      scaleLinear
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='yscale'>
+      yScale
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>la variable almacena los límites gráficos y de información del eje y
+El eje y representa la temperatura</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>yScale</div>
+   
+  
+    <p>
+      Type:
+      scaleLinear
+    </p>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='dayweather'>
+      DayWeather
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La clase renderiza el clima promedio de una día según el clima por horas recibido</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new DayWeather()</div>
+   
+  
+  
+    <p>
+      Extends
+      
+        Component
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='dayweather_mintemp'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_minTemp(temps)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Calcula la temperatura mas baja entre todas las recibidas</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_minTemp(temps: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): Float</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Las temperaturas del día
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Float</code>:
+        La temperatura mas baja
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dayweather_maxtemp'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_maxTemp(temps)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Calcula la temperatura mas alta entre todas las recibidas</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_maxTemp(temps: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): Float</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    las temperaturas del día
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Float</code>:
+        La temperatura mas alta
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dayweather_geticon'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_getIcon(temps)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Obtiene el icono que representa el clima del día</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_getIcon(temps: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>temps</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    los climas del día
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        La clase del icono a mostrar
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dayweatherrender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Presenta el clima promedio de un dia, y sus temperaturas máxima y mínima
+el componente agrega un Link en el nombre del día, que sirve para cargar el
+componente que carga el detalle diario</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>render(): Component</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Component</code>:
+        El clima del día
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='dayweatherdetailed'>
+      DayWeatherDetailed
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La clase representa el tiempo de un día en detalle</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new DayWeatherDetailed()</div>
+   
+  
+  
+    <p>
+      Extends
+      
+        Component
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='dayweatherdetailed_renderdetail'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_renderDetail()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>El método renderiza el clima a lo largo del día</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_renderDetail(): Component</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Component</code>:
+        los climas del día
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dayweatherdetailed_getday'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_getDay()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Obtiene el día requerido de prop de dias, a partir del String del prop  day</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_getDay(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Clima de un dia en detalle
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dayweatherdetailed_getdayname'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_getDayName()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Obtiene el nombre del día según props</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_getDayName(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a></code>:
+        El nombre del día consultado
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='dayweatherdetailedrender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Renderiza una tabla con el clima detallado del dia requerido</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>render(): Component</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Component</code>:
+        El clima de un dia y el grafico diario
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='weather'>
+      Weather
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La clase contiene los componentes de clima semanal, clima diario y los gráficos correspondientes</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new Weather()</div>
+   
+  
+  
+    <p>
+      Extends
+      
+        Component
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='weather_getdays'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_getDays(list)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>La funcion construye un array del clima por cada día
+a partir de un array con el clima para hoy y los próximos 5 dias
+la función guarda un estado con los días</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_getDays(list: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>list</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    el listado de climas para los días siguientes
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='weather_getcityinfo'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_getCityInfo(city)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>La funcion almacena el nombre de la ciudad consultada en un estado</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_getCityInfo(city: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>city</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">String</a>)</code>
+	    la ciudad consultada
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='weatherrender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>El render contiene los componentes de clima semanal, gráfico semanal y detalle diario
+React router carga el componente correspondiente segun la ruta
+WeekWeather siempre se muestra en la parte superior
+En la parte inferior, switch determina que componente se carga según la ruta</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>render(): Component</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Component</code>:
+        El componente requerido según la ruta
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='weekgraphicweather'>
+      WeekGraphicWeather
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La clase crear el gráfico del clima semanal</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new WeekGraphicWeather()</div>
+   
+  
+  
+    <p>
+      Extends
+      
+        Component
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='weekgraphicweathercomponentdidmount'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>componentDidMount()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>La funcion se ejecuta al finalizar el montaje del componente
+Recupera el listado del clima semanal
+Calcula el ancho del contenedor del gráfico</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>componentDidMount(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise">Promise</a></code>:
+        La promesa carga la información del gráfico y el ancho de este
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='weekgraphicweather_getdays'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_getDays(list)</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>La funcion construye un array del clima por cada día
+a partir de un array con el clima para hoy y los próximos 5 dias
+la función construye la información para el gráfico, incluyendo día
+y temperatura promedio</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_getDays(list: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>list</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    El listado de climas de los5 dias
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='weekgraphicweatherrender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Renderiza el gráfico con los datos de los días utilizando VX</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>render(): Component</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Component</code>:
+        Gráfico de clima semanal
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='weekweather'>
+      WeekWeather
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>La clase renderiza los días y el clima de cada uno</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>new WeekWeather()</div>
+   
+  
+  
+    <p>
+      Extends
+      
+        Component
+      
+    </p>
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Instance Members</div>
+    <div class="clearfix">
+  
+    <div class='border-bottom' id='weekweather_renderdays'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>_renderDays()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>El método carga el componente DayWeather para cadá dia a mostrar</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>_renderDays(): [type]</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>[type]</code>:
+        [description]
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+    <div class='border-bottom' id='weekweatherrender'>
+      <div class="clearfix small pointer toggle-sibling">
+        <div class="py1 contain">
+            <a class='icon pin-right py1 dark-link caret-right'>▸</a>
+            <span class='code strong strong truncate'>render()</span>
+        </div>
+      </div>
+      <div class="clearfix display-none toggle-target">
+        <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+
+  <p>Renderiza el componente y los días requeridos</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>render(): Component</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>Component</code>:
+        Los días requeridos
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+      </div>
+    </div>
+  
+</div>
+
+  
+
+  
+</section>
+
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>
