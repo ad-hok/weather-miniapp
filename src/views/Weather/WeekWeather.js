@@ -42,7 +42,7 @@ class WeekWeather extends Component {
    */
   render() {
     const { days, city } = this.props;
-    if(!days.length || !city) return '';
+    if(!days || !days.length || !city) return '';
     return (
       <div>
         <Card>
